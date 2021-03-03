@@ -20,23 +20,34 @@ font-family: 'Open Sans', sans-serif; */
 body {
 	margin: 0;
 	color: var(--lightGrey);
+	background-color: var(--darkPurple);
 	font-family: 'Open Sans', sans-serif;
 }
 body::-webkit-scrollbar {
-	 width: 14px;
- }
+	width: 14px;
+}
 body::-webkit-scrollbar-thumb {
-	 background-color: var(--purple);
-	 border-radius: 20px;
-	 border: 3px solid #c3c3c3;
- }
+	background-color: var(--purple);
+	border-radius: 20px;
+	border: 3px solid #c3c3c3;
+}
 body::-webkit-scrollbar-track {
-	 background-color: #c3c3c3;
- }
+	background-color: #c3c3c3;
+}
 
 span {
 	color: var(--lightGrey);
 	font-size: 30px;
+}
+
+.flex {
+	display: flex;
+}
+.flexWrap {
+	flex-wrap: wrap;
+}
+.justifyContent {
+	justify-content: center;
 }
 
 a {
@@ -62,8 +73,7 @@ a {
 	background-repeat: no-repeat;
 	background-position: left;
 	background-size: cover;
-	border-bottom: 3px solid var(--lightGrey);
-
+	border-bottom: 2px solid var(--lightGrey);
 }
 
 .header h1 {
@@ -80,8 +90,7 @@ a {
 	border-radius: 4%;
 	background-color: white;
 	width: 100%;
-	margin: 0;
-	margin-bottom: 5px;
+	margin: 0 0 5px 0;
 }
 
 .header > div {
@@ -102,13 +111,13 @@ a {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: var(--purple);
-	transition: filter 300ms;
+	background-color: var(--darkPink);
+	transition: background-color 300ms;
 	margin-left: 10px;
 }
 
 .header .iconButton > div:hover {
-	filter: brightness(1.2);
+	background-color: var(--cyan);
 	cursor: pointer;
 }
 
@@ -118,33 +127,50 @@ a {
 }
 
 .nav {
-	position: absolute;
 	font-family: 'Nunito', sans-serif;
 	display: flex;
 	align-content: center;
 	justify-content: space-evenly;
 	height: 50px;
 	width: 100%;
-	border-radius: 12px;
-    bottom: -52px;
-    left: 0;
-    right: 0;
-    box-shadow: 0 8px 22px var(--purple);
-
-	/*background-image: url('./Images/Ultra-Violet-Galactic-Header.jpg');*/
+	border-bottom: 2px solid var(--lightGrey);
+	box-shadow: 0 8px 22px var(--purple);
 }
 
 .navLink {
+	position: relative;
 	text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-weight: 600;
 	background-color: rgba(58, 12, 163, 0.9);
 	height: 100%;
-    width: 300px;
+	width: 100%;
 	box-sizing: border-box;
 	transition: background-color 300ms;
+	overflow: hidden;
+}
+
+.navLink > .ripple {
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: ripples 0.6s linear infinite;
+}
+@keyframes ripples {
+	0% {
+		width: 0;
+		height: 0;
+		opacity: 0.5;
+	}
+	100% {
+		width: 500px;
+		height: 500px;
+		opacity: 0;
+	}
 }
 
 h2.navLink {
@@ -177,7 +203,7 @@ h2.navLink {
 .show {
 	display: block;
 	opacity: 1;
-	animation: slideInRight;
+	/*animation: slideInRight;*/
 	animation-duration: 500ms;
 }
 
@@ -190,24 +216,99 @@ h2.navLink {
 	}
 }
 
+/*-------------------------- Pages -------------------------- */
 
+.graphicDesign {
+	width: 100%;
+}
 
 .graphicDesign img {
-	width: 500px;
-	height: 500px;
 	object-fit: contain;
 	margin: 0 auto 25px;
+	box-shadow: 0 8px 22px var(--purple);
 }
 
-.uxUiDesign {
+.graphicDesign .flex img {
+	margin: 0 0 25px 0;
+	width: 33%;
+	height: fit-content;
+}
+.graphicDesign .flex {
+	justify-content: space-evenly;
+}
+
+.uxUiDesign .pageWrapper > div {
+	margin-bottom: 150px;
+}
+
+.uxUiDesign .pageWrapper .rowOne {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.uxUiDesign .pageWrapper .rowOne img {
+	width: 80%;
 
 }
-.personalWork {
+
+.uxUiDesign .pageWrapper .rowTwo {
+	display: flex;
+	align-items: center;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColOne {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColOne img {
+	object-fit: contain;
+	width: 400px;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColTwo {
+	width: 50%;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColTwo img {
+	width: 300px;
+	margin-right: 10px;
+}
+
+.uxUiDesign .pageWrapper .rowThree {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.uxUiDesign .pageWrapper .rowThree img {
 
 }
+
 .projects {
-
 }
 .aboutMe {
+}
 
+#ZoomImagePopup {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 851px) {
+	span.icon-menu {
+		font-size: 100px;
+		display: block !important;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+	}
 }

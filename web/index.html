@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Maddie Shoemaker Portfolio</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, viewport-fit=cover, user-scalable=no"
+		/>
 		<link rel="stylesheet" type="text/css" href="./Icons/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -18,6 +21,7 @@
 
 	<body>
 		<div class="bodyWrapper">
+			<!--			<span class='icon-menu'></span>-->
 			<div class="header">
 				<div data-aos="zoom-in">
 					<h1 class="heroTitle">MADDIE SHOEMAKER</h1>
@@ -41,7 +45,7 @@
 						data-aos="fade-left"
 						data-aos-delay="300"
 						class="iconButton"
-						href="https://www.linkedin.com/in/maddie-shoemaker-1a46bb204/"
+						href="mailto:maddieshoemaker87@gmail.com"
 						target="_blank"
 					>
 						<div>
@@ -49,41 +53,64 @@
 						</div>
 					</a>
 				</div>
-				<div class="nav">
-					<h2 class="navLink selectedNav" data-view="graphicDesign">Graphic Design</h2>
-					<h2 class="navLink" data-view="uxUiDesign">UI / UX Design</h2>
-					<h2 class="navLink" data-view="personalWork">Personal Work</h2>
-					<h2 class="navLink" data-view="projects">Projects</h2>
-					<h2 class="navLink" data-view="aboutMe">About Me</h2>
-				</div>
+			</div>
+			<div class="nav">
+				<h2 onclick="rippleEffect(event)" class="navLink selectedNav" data-view="graphicDesign">
+					Graphic Design
+				</h2>
+				<h2 onclick="rippleEffect(event)" class="navLink" data-view="uxUiDesign">UI / UX Design</h2>
+				<h2 onclick="rippleEffect(event)" class="navLink" data-view="projects">Projects</h2>
+				<h2 onclick="rippleEffect(event)" class="navLink" data-view="aboutMe">About Me</h2>
 			</div>
 			<div class="contentWrapper">
-				<div  class="graphicDesign page show">
-					<div class='pageWrapper'>
-						<h2>Graphic Design</h2>
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
-						<img data-aos='fade-up' src='./Images/Tiger%20Blep.jpg' alt='Tiger Blep' />
+				<div class="graphicDesign page show">
+					<div class="pageWrapper">
+						<img data-aos="fade-up" src="./Images/PersonalWork/BunnyArt.jpg" alt="Tiger Blep" width="50%" />
+						<div class="flex">
+							<img data-aos="fade-up" src="./Images/PersonalWork/DonutSketch.jpg" alt="Tiger Blep" />
+							<img data-aos="fade-up" src="./Images/PersonalWork/Kaia.jpg" alt="Tiger Blep" />
+						</div>
+						<img
+							data-aos="fade-up"
+							src="./Images/PersonalWork/TigerBlep.jpg"
+							alt="Tiger Blep"
+							width="60%"
+						/>
 					</div>
 				</div>
 
-				<div  class="uxUiDesign page">
-					<h2>UI / UX Design</h2>
+				<div class="uxUiDesign page">
+					<div class="pageWrapper">
+						<div data-aos="fade-up" class="rowOne">
+							<img src="Images/UiUxDesign/HomepageSample.png" alt="" />
+						</div>
+						<div data-aos="fade-up" class="rowTwo">
+							<div class="rowTwoColOne">
+								<img src="Images/UiUxDesign/Jordan.png" alt="" />
+							</div>
+							<div class="rowTwoColTwo">
+								<img src="Images/UiUxDesign/ParrotBtn.jpeg" alt="" />
+								<img src="Images/UiUxDesign/PCBtn.jpeg" alt="" />
+								<img src="Images/UiUxDesign/WhyBtn.jpeg" alt="" />
+								<img src="Images/UiUxDesign/CanadaBtn.jpeg" alt="" />
+							</div>
+						</div>
+						<div data-aos="fade-up" class="rowThree">
+							<div>
+								<img src="Images/UiUxDesign/SignInA.png" alt="" />
+							</div>
+							<div>
+								<img src="Images/UiUxDesign/SignInB.png" alt="" />
+							</div>
+						</div>
+					</div>
 				</div>
 
-				<div  class="personalWork page">
-					<h2>Personal Work</h2>
-				</div>
-
-				<div  class="projects page">
+				<div class="projects page">
 					<h2>Projects</h2>
 				</div>
 
-				<div  class="aboutMe page">
+				<div class="aboutMe page">
 					<h2>About Me</h2>
 				</div>
 			</div>
