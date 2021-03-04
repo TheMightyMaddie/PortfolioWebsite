@@ -2,6 +2,8 @@
 // 	duration: 1200,
 // });
 
+let isMobileMenuShown = false;
+
 function renderView(element) {
 	$('.page').each(function() {
 		$(this).removeClass('show');
@@ -18,8 +20,13 @@ function bindHandlers () {
 		})
 		$(this).addClass('selectedNav');
 		renderView(this);
+		toggleMobileMenu();
 		bindHandlers();
 	});
+
+	$('.icon-menu').off('click').click(function() {
+		toggleMobileMenu();
+	})
 
 	AOS.init({
 		duration: 1200,
@@ -27,6 +34,13 @@ function bindHandlers () {
 }
 bindHandlers();
 
+
+function toggleMobileMenu() {
+	if(!isMobileMenuShown) 	$('.mobileMenu').css('transform', 'translateX(0)');
+	else $('.mobileMenu').css('transform', 'translateX(100vw)');
+
+	isMobileMenuShown = !isMobileMenuShown;
+}
 
 function rippleEffect(event) {
 	let targetBoundingRect = event.currentTarget.getBoundingClientRect();

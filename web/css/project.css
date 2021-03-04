@@ -1,0 +1,24 @@
+@import './index.css';
+
+.projects h2 {
+	font-weight: 600;
+	font-size: 32px;
+}
+
+.projects hr {
+	border: none;
+    border-radius: 5px;
+	height: 4px;
+	width: 100%;
+	margin: 15px auto;
+	background-color: var(--darkPurple);
+}
+
+.projects .projectMedia {
+	margin-right: 150px;
+}
+
+
+/*.projects > div:nth-of-type(even) {*/
+/*	flex-direction: row-reverse;*/
+/*}*/

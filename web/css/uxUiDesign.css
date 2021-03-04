@@ -1,0 +1,51 @@
+@import './index.css';
+
+.uxUiDesign .pageWrapper > div {
+    margin-bottom: 150px;
+}
+
+.uxUiDesign .pageWrapper .rowOne {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.uxUiDesign .pageWrapper .rowOne img {
+    width: 80%;
+
+}
+
+.uxUiDesign .pageWrapper .rowTwo {
+    display: flex;
+    align-items: center;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColOne {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColOne img {
+    object-fit: contain;
+    width: 400px;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColTwo {
+    width: 50%;
+}
+
+.uxUiDesign .pageWrapper .rowTwo .rowTwoColTwo img {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.uxUiDesign .pageWrapper .rowThree {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.uxUiDesign .pageWrapper .rowThree img {
+
+}

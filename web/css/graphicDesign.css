@@ -1,0 +1,19 @@
+@import './index.css';
+.graphicDesign {
+    width: 100%;
+}
+
+.graphicDesign img {
+    object-fit: contain;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 22px var(--purple);
+}
+
+.graphicDesign .flex img {
+    margin: 0 0 25px 0;
+    width: 33%;
+    height: fit-content;
+}
+.graphicDesign .flex {
+    justify-content: space-evenly;
+}

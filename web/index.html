@@ -9,6 +9,10 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="./Icons/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/about.css" />
+		<link rel="stylesheet" type="text/css" href="css/graphicDesign.css" />
+		<link rel="stylesheet" type="text/css" href="css/project.css" />
+		<link rel="stylesheet" type="text/css" href="css/uxUiDesign.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
@@ -21,7 +25,7 @@
 
 	<body>
 		<div class="bodyWrapper">
-			<!--			<span class='icon-menu'></span>-->
+			<span class="icon-menu"></span>
 			<div class="header">
 				<div data-aos="zoom-in">
 					<h1 class="heroTitle">MADDIE SHOEMAKER</h1>
@@ -107,13 +111,67 @@
 				</div>
 
 				<div class="projects page">
-					<h2>Projects</h2>
+					<div class="flex alignCenter">
+						<div class="projectMedia">
+							<iframe
+								width="560"
+								height="315"
+								src="https://www.youtube.com/embed/EXHdzm-bR8Y"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+						<div>
+							<h2>Boise Airport Tour in 360</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa distinctio
+								doloremque dolorum explicabo fugit iste minima molestiae mollitia non numquam possimus
+								provident quaerat quam saepe sequi totam voluptate voluptatem.
+							</p>
+						</div>
+					</div>
+					<hr />
+					<div class="flex alignCenter">
+						<div class="projectMedia">
+							<img src="Images/placeholderImg.jpg" alt="Placeholder image" width="560" height="315" />
+						</div>
+						<div>
+							<h2>GIMM Sign Competition</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa distinctio
+								doloremque dolorum explicabo fugit iste minima molestiae mollitia non numquam possimus
+								provident quaerat quam saepe sequi totam voluptate voluptatem.
+							</p>
+						</div>
+					</div>
+					<hr />
+					<div class="flex alignCenter">
+						<div class="projectMedia">
+							<img src="Images/placeholderImg.jpg" alt="Placeholder image" width="560" height="315" />
+						</div>
+						<div>
+							<h2>Luminary Virtual Museum</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa distinctio
+								doloremque dolorum explicabo fugit iste minima molestiae mollitia non numquam possimus
+								provident quaerat quam saepe sequi totam voluptate voluptatem.
+							</p>
+						</div>
+					</div>
 				</div>
 
 				<div class="aboutMe page">
 					<h2>About Me</h2>
 				</div>
 			</div>
+		</div>
+
+		<div class="mobileMenu" style="display: none">
+			<h2 onclick="rippleEffect(event)" class="navLink selectedNav" data-view="graphicDesign">Graphic Design</h2>
+			<h2 onclick="rippleEffect(event)" class="navLink" data-view="uxUiDesign">UI / UX Design</h2>
+			<h2 onclick="rippleEffect(event)" class="navLink" data-view="projects">Projects</h2>
+			<h2 onclick="rippleEffect(event)" class="navLink" data-view="aboutMe">About Me</h2>
 		</div>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	</body>
